@@ -1,15 +1,6 @@
-# makeaipac
+# MakeAIPAC
+> WIP
 
-To install dependencies:
+> ⚠️ **WARNING**: ⚠️ This is a parody meme generator inspired by trackaipac.com. It is not affiliated with, endorsed by, or intended to represent any real organization, individual, or political campaign. All generated content is satirical and fictional. Do not present generated content as real.
 
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.3.10. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+An AIPAC meme generator, make it seem like Your friends and family are funded by AIPAC!
