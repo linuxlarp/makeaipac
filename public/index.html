@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            @font-face {
+                font-family: "AIPACFont";
+                src: url("/assets/font.ttf") format("truetype");
+            }
+            body {
+                font-family: "AIPACFont";
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Generate AIPAC</h2>
+        <canvas id="canvas"></canvas>
+
+        <script>
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+
+            const img = new Image();
+            img.onload = () => {
+                canvas.width = img.width;
+                canvas.height = img.height;
+                ctx.drawImage(img, 0, 0);
+            };
+            img.src = "/assets/template.jpg";
+        </script>
+    </body>
+</html>
