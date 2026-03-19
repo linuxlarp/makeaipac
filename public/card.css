@@ -4,12 +4,31 @@
     aspect-ratio: 1/1;
     container-type: inline-size;
 }
+
+.portrait-frame {
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    width: 48%;
+    height: 60%;
+    overflow: hidden;
+}
+
+.portrait {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100);
+    object-fit: contain;
+    object-position: center;
+}
+
 .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
+
 .name-block {
     position: absolute;
     top: 30%;
@@ -25,8 +44,10 @@
     word-spacing: 9999px;
     overflow-wrap: normal;
 }
+
 .occupation {
     font-size: clamp(10px, 3.5cqw, 100px);
+    font-weight: lighter;
 }
 
 .money {

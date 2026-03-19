@@ -24,6 +24,10 @@
             </div>
 
             <span class="ovr money">{{money}}</span>
+
+            <div class="portrait-frame">
+                <img class="portrait" id="portrait" />
+            </div>
         </div>
 
         <form class="details">
@@ -35,6 +39,8 @@
 
             <label for="name">Money Recieved</label><br />
             <input type="number" id="money" name="money" />
+
+            <input type="file" id="imageUpload" />
         </form>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -55,12 +61,24 @@
             const moneyInputField = document.getElementById("money");
             const moneySpan = document.querySelector(".money");
 
+            const imageUploadField = document.getElementById("imageUpload");
+            const portraitImage = document.querySelector(".portrait");
+
             nameInputField.addEventListener("input", (e) => {
                 nameSpan.textContent = e.target.value.toUpperCase();
             });
 
             occupationInputField.addEventListener("input", (e) => {
                 occupationSpan.textContent = e.target.value.toUpperCase();
+            });
+
+            imageUploadField.addEventListener("change", function (e) {
+                if (this.files && this.files[0]) {
+                    portraitImage.src = URL.createObjectURL(this.files[0]);
+                    portraitImage.onload = () => {
+                        URL.revokeObjectURL(portraitImage.src);
+                    };
+                }
             });
 
             moneyInputField.addEventListener("input", (e) => {
