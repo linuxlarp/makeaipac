@@ -12,20 +12,63 @@
         </style>
     </head>
     <body>
-        <h2>Generate AIPAC</h2>
-        <canvas id="canvas"></canvas>
+        <h1>Generate AIPAC</h1>
+        <canvas id="canvas"> </canvas>
+
+        <form>
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" />
+
+            <label for="name">Occupation</label><br />
+            <input type="text" id="occupation" name="occupation" />
+
+            <label for="name">Money Recieved</label><br />
+            <input type="text" id="money" name="money" />
+        </form>
 
         <script>
             const canvas = document.getElementById("canvas");
             const ctx = canvas.getContext("2d");
 
-            const img = new Image();
-            img.onload = () => {
-                canvas.width = img.width;
-                canvas.height = img.height;
-                ctx.drawImage(img, 0, 0);
+            const state = {
+                name: "Example",
+                title: "Person of Interest",
+                money: "500000",
             };
-            img.src = "/assets/template.jpg";
+
+            const nameInputField = document.getElementById("name");
+
+            function fillTextMultiline(text, x, y, lineHeight) {
+                text.split("\n").forEach((line, index) => {
+                    ctx.fillText(line, x, y + index * lineHeight);
+                });
+            }
+
+            function generateAIPAC() {
+                const img = new Image();
+
+                img.onload = () => {
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    ctx.drawImage(img, 0, 0);
+
+                    ctx.font = "100px AIPACFont";
+                    ctx.fillStyle = "white";
+
+                    fillTextMultiline(state.name, 610, 430, 10);
+                };
+
+                img.src = "/assets/template.jpg";
+            }
+
+            nameInputField.addEventListener("input", (e) => {
+                let unparsedText = e.target.value;
+                state.name = unparsedText.toUpperCase();
+
+                generateAIPAC();
+            });
+
+            generateAIPAC();
         </script>
     </body>
 </html>
