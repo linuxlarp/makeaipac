@@ -1,5 +1,6 @@
 .card {
     position: relative;
+    color: white;
     width: 800px;
     aspect-ratio: 1/1;
     container-type: inline-size;
@@ -9,9 +10,7 @@
     position: absolute;
     top: 25%;
     left: 2%;
-    width: 48%;
-    height: 60%;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .portrait {

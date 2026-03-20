@@ -66,6 +66,14 @@
                     ,
                     value="5"
                 />
+                <label>Size</label><br />
+                <input
+                    type="range"
+                    id="sizeSlider"
+                    min="10"
+                    max="100"
+                    value="45"
+                />
             </div>
         </div>
 
@@ -93,6 +101,7 @@
 
             const xPosSlider = document.getElementById("xPosSlider");
             const yPosSlider = document.getElementById("yPosSlider");
+            const sizeSlider = document.getElementById("sizeSlider");
 
             nameInputField.addEventListener("input", (e) => {
                 nameSpan.textContent = e.target.value.toUpperCase();
@@ -134,12 +143,18 @@
                 moneySpan.textContent = formatted;
             });
 
-            xPosSlider.addEventListener("change", (e) => {
+            xPosSlider.addEventListener("input", (e) => {
                 portraitFrame.style.left = `${e.target.value}%`;
             });
 
-            yPosSlider.addEventListener("change", (e) => {
+            yPosSlider.addEventListener("input", (e) => {
                 portraitFrame.style.top = `${e.target.value}%`;
+            });
+
+            sizeSlider.addEventListener("input", (e) => {
+                const scale = e.target.value / 50;
+                portraitFrame.style.transform = `scale(${scale})`;
+                portraitFrame.style.transformOrigin = "top left";
             });
         </script>
     </body>

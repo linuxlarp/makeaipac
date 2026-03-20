@@ -7,11 +7,11 @@ const serverPort = 4700;
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use((req, res) => {
-  res.status(404).send("Not found");
+  res.status(404).send("404 - Not found");
 });
 
-app.use((req, res) => {
-  res.status(503);
+app.use((err, req, res, next) => {
+  res.status(500).send("500 - Internal server error");
 });
 
 app.listen(serverPort, () => {
