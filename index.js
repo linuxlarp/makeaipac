@@ -7,7 +7,7 @@ const serverPort = 4700;
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use((req, res) => {
-  res.status(404);
+  res.status(404).send("Not found");
 });
 
 app.use((req, res) => {

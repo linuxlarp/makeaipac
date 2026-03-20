@@ -25,12 +25,12 @@
 
             <span class="ovr money">{{money}}</span>
 
-            <div class="portrait-frame">
+            <div class="portrait-frame" id="portrait-frame">
                 <img class="portrait" id="portrait" />
             </div>
         </div>
 
-        <form class="details">
+        <div class="details">
             <label for="name">Name:</label><br />
             <input type="text" id="name" name="name" />
 
@@ -41,7 +41,33 @@
             <input type="number" id="money" name="money" />
 
             <input type="file" id="imageUpload" />
-        </form>
+
+            <h3>Image Options</h3>
+            <div class="sliders">
+                <label for="name">X POS</label><br />
+                <input
+                    type="range"
+                    id="xPosSlider"
+                    ,
+                    min="1"
+                    ,
+                    max="100"
+                    value="2"
+                />
+
+                <label for="name">Y POS</label><br />
+                <input
+                    type="range"
+                    id="yPosSlider"
+                    ,
+                    min="1"
+                    ,
+                    max="100"
+                    ,
+                    value="5"
+                />
+            </div>
+        </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
@@ -63,6 +89,10 @@
 
             const imageUploadField = document.getElementById("imageUpload");
             const portraitImage = document.querySelector(".portrait");
+            const portraitFrame = document.getElementById("portrait-frame");
+
+            const xPosSlider = document.getElementById("xPosSlider");
+            const yPosSlider = document.getElementById("yPosSlider");
 
             nameInputField.addEventListener("input", (e) => {
                 nameSpan.textContent = e.target.value.toUpperCase();
@@ -73,12 +103,19 @@
             });
 
             imageUploadField.addEventListener("change", function (e) {
+                console.log("files:", this.files);
+
                 if (this.files && this.files[0]) {
-                    portraitImage.src = URL.createObjectURL(this.files[0]);
+                    const url = URL.createObjectURL(this.files[0]);
+                    console.log(url);
+                    portraitImage.src = url;
                     portraitImage.onload = () => {
-                        URL.revokeObjectURL(portraitImage.src);
+                        console.log("loaded");
+                        URL.revokeObjectURL(url);
                     };
                 }
+
+                this.value = "";
             });
 
             moneyInputField.addEventListener("input", (e) => {
@@ -95,6 +132,14 @@
 
                 moneySpan.style.fontSize = `${size}cqw`;
                 moneySpan.textContent = formatted;
+            });
+
+            xPosSlider.addEventListener("change", (e) => {
+                portraitFrame.style.left = `${e.target.value}%`;
+            });
+
+            yPosSlider.addEventListener("change", (e) => {
+                portraitFrame.style.top = `${e.target.value}%`;
             });
         </script>
     </body>
