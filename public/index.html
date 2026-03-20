@@ -78,8 +78,9 @@
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="app.js"></script>
 
-        <script>
+        <!--<script>
             const state = {
                 name: "Example",
                 title: "Person of Interest",
@@ -104,7 +105,10 @@
             const sizeSlider = document.getElementById("sizeSlider");
 
             nameInputField.addEventListener("input", (e) => {
-                nameSpan.textContent = e.target.value.toUpperCase();
+                this.name = e.target.value;
+
+                nameSpan.textContent = this.name.toUpperCase();
+                state.name = this.name;
             });
 
             occupationInputField.addEventListener("input", (e) => {
@@ -156,6 +160,6 @@
                 portraitFrame.style.transform = `scale(${scale})`;
                 portraitFrame.style.transformOrigin = "top left";
             });
-        </script>
+        </script>-->
     </body>
 </html>
