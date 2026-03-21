@@ -22,30 +22,33 @@ This project serves as a funny, simple barebones TrackAIPAC meme/graphic generat
 [![Example 1][example1]]
 [![Example 2][example2]]
 
-# Try it our for Yourself!
+## Try it our for Yourself!
 Visit [makeaipac.linuxlarp.dev](https://makeaipac.linuxlarp.dev) and see what madness you can create!
 **(NOT ACTIVE)**
 
-# Project Setup
-- Install [bun](https://bun.sh)
+## Project Setup
+- Install [![Bun][bun-logo]][bun-url]
 - Fork or clone the repository
 - Install dependencies via ``bun i``
 - Run the project by ``bun dev`` or ``bun prod`` (**NOTE**: both scripts do the EXACT same thing, ill standarize this later)
 
-# Contributing
+## Contributing
 Any contributions, wether ideas, rewrites or code changes are greatly appreciated. 
 Want to make a change to the code? Fork this repostory, and open a [Pull Request (PR)](https://github.com/linuxlarp/makeaipac/pulls) with your changes.
 Want to suggest an idea? Head over to the issues page, and label your issue as a "Feature Request"
 
-# Roadmap
-- [ ] Image cropping tools
+## Roadmap
+- [ ] Better controls and image tools
 - [ ] Enable/disable grayscale filter
-- [ ] Better stylesheet
-- [ ] More organization
+- [x] Better stylesheet
+- [x] More organization
 - [ ] Prepare for Release
+- [ ] Green template (No money recieved from AIPAC)
 
 ## ⚠️ Legal Disclaimer
 This is a parody meme generator inspired by trackaipac.com. It is not affiliated with, endorsed by, or intended to represent any real organization, individual, or political campaign. All generated content is satirical and fictional. Do not present generated content as real. This software is also in early development and may not be fully complete.
+
+This project is entirely a joke and should not be taken seriously whatosever.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
