@@ -1,32 +1,29 @@
 # MakeAIPAC
-> Is your friend funded by AIPAC? 🤔
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![project_license][license-shield]][license-url]
 
-
-> ⚠️ **WARNING**: ⚠️ This is a parody meme generator inspired by trackaipac.com. It is not affiliated with, endorsed by, or intended to represent any real organization, individual, or political campaign. All generated content is satirical and fictional. Do not present generated content as real. This software is also in early development and may not be fully complete.
+> Is your friend funded by AIPAC? 🤔
 
 # About
 An [AIPAC](https://www.aipac.org/) meme generator, make it seem like Your friends and family are funded by AIPAC by generating [TrackAIPAC](https://trackaipac.com) style graphics locally on your web browser!
 
 This project serves as a funny, simple barebones TrackAIPAC meme/graphic generator with a caching/delivery server built with the following tools:
 
-* [html5-logo][html5-url]
-* [expressjs-logo][expressjs-url]
-* [bun-logo][bun-url]
-* [css-logo][css-url]
-* [js-logo][js-url]
+* [![HTML5][html5-logo]][html5-url]
+* [![Express.js][expressjs-logo]][expressjs-url]
+* [![Bun][bun-logo]][bun-url]
+* [![CSS3][css-logo]][css-url]
+* [![JavaScript][js-logo]][js-url]
 
-# Examples
-[example1]
-[example2]
+## Examples
+[![Example 1][example1]]
+[![Example 2][example2]]
 
 # Try it our for Yourself!
-Visit [https://makeaipac.linuxlarp.dev], and see what madness you can create!
+Visit (makeaipac.linuxlarp.dev)[https://makeaipac.linuxlarp.dev], and see what madness you can create!
 **(NOT ACTIVE)**
 
 # Project Setup
@@ -46,6 +43,8 @@ Want to suggest an idea? Head over to the issues page, and label your issue as a
 - [ ] Better stylesheet
 - [ ] More organization
 
+## ⚠️ Legal Disclaimer
+This is a parody meme generator inspired by trackaipac.com. It is not affiliated with, endorsed by, or intended to represent any real organization, individual, or political campaign. All generated content is satirical and fictional. Do not present generated content as real. This software is also in early development and may not be fully complete.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
