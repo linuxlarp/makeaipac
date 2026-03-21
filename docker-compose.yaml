@@ -1,0 +1,6 @@
+services:
+  makeaipac-cdn:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "4700:4700"

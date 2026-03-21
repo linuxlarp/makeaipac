@@ -42,8 +42,12 @@ Want to suggest an idea? Head over to the issues page, and label your issue as a
 - [ ] Enable/disable grayscale filter
 - [x] Better stylesheet
 - [x] More organization
-- [ ] Prepare for Release
 - [ ] Green template (No money recieved from AIPAC)
+- [ ] Export Feature
+- [ ] Proper server configuration
+- [ ] Convert to ViteJs for TS? (near future)
+ 
+> Pst! Any commits related to these ideas would help tremendously.
 
 ## ⚠️ Legal Disclaimer
 This is a parody meme generator inspired by trackaipac.com. It is not affiliated with, endorsed by, or intended to represent any real organization, individual, or political campaign. All generated content is satirical and fictional. Do not present generated content as real. This software is also in early development and may not be fully complete.
