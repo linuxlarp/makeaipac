@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="card.css" />
+        <style>
+            @font-face {
+                font-family: "AIPACFont";
+                src: url("/assets/font.ttf") format("truetype");
+            }
+            body {
+                font-family: "AIPACFont";
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Generate AIPAC</h1>
+        <div class="card">
+            <img src="/assets/template.jpg" />
+
+            <div class="ovr name-block">
+                <span class="ovr name">{{name}}</span>
+                <span class="ovr occupation">{{occupation}}</span>
+            </div>
+
+            <span class="ovr money">{{money}}</span>
+
+            <div class="portrait-frame" id="portrait-frame">
+                <img class="portrait" id="portrait" />
+            </div>
+        </div>
+
+        <div class="details">
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" />
+
+            <label for="name">Occupation</label><br />
+            <input type="text" id="occupation" name="occupation" />
+
+            <label for="name">Money Recieved</label><br />
+            <input type="number" id="money" name="money" />
+
+            <input type="file" id="imageUpload" />
+
+            <h3>Image Options</h3>
+            <div class="sliders">
+                <label for="name">X POS</label><br />
+                <input
+                    type="range"
+                    id="xPosSlider"
+                    ,
+                    min="1"
+                    ,
+                    max="100"
+                    value="2"
+                />
+
+                <label for="name">Y POS</label><br />
+                <input
+                    type="range"
+                    id="yPosSlider"
+                    ,
+                    min="1"
+                    ,
+                    max="100"
+                    ,
+                    value="5"
+                />
+                <label>Size</label><br />
+                <input
+                    type="range"
+                    id="sizeSlider"
+                    min="10"
+                    max="100"
+                    value="45"
+                />
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="app.js"></script>
+
+        <!--<script>
+            const state = {
+                name: "Example",
+                title: "Person of Interest",
+                money: "500000",
+            };
+
+            const nameInputField = document.getElementById("name");
+            const nameSpan = document.querySelector(".name");
+
+            const occupationInputField = document.getElementById("occupation");
+            const occupationSpan = document.querySelector(".occupation");
+
+            const moneyInputField = document.getElementById("money");
+            const moneySpan = document.querySelector(".money");
+
+            const imageUploadField = document.getElementById("imageUpload");
+            const portraitImage = document.querySelector(".portrait");
+            const portraitFrame = document.getElementById("portrait-frame");
+
+            const xPosSlider = document.getElementById("xPosSlider");
+            const yPosSlider = document.getElementById("yPosSlider");
+            const sizeSlider = document.getElementById("sizeSlider");
+
+            nameInputField.addEventListener("input", (e) => {
+                this.name = e.target.value;
+
+                nameSpan.textContent = this.name.toUpperCase();
+                state.name = this.name;
+            });
+
+            occupationInputField.addEventListener("input", (e) => {
+                occupationSpan.textContent = e.target.value.toUpperCase();
+            });
+
+            imageUploadField.addEventListener("change", function (e) {
+                console.log("files:", this.files);
+
+                if (this.files && this.files[0]) {
+                    const url = URL.createObjectURL(this.files[0]);
+                    console.log(url);
+                    portraitImage.src = url;
+                    portraitImage.onload = () => {
+                        console.log("loaded");
+                        URL.revokeObjectURL(url);
+                    };
+                }
+
+                this.value = "";
+            });
+
+            moneyInputField.addEventListener("input", (e) => {
+                const num = parseFloat(e.target.value);
+                const formatted = isNaN(num)
+                    ? "$0.00"
+                    : num.toLocaleString("en-us", {
+                          style: "currency",
+                          currency: "USD",
+                      });
+
+                const length = formatted.length;
+                const size = Math.max(2, 10 - length * 0.3);
+
+                moneySpan.style.fontSize = `${size}cqw`;
+                moneySpan.textContent = formatted;
+            });
+
+            xPosSlider.addEventListener("input", (e) => {
+                portraitFrame.style.left = `${e.target.value}%`;
+            });
+
+            yPosSlider.addEventListener("input", (e) => {
+                portraitFrame.style.top = `${e.target.value}%`;
+            });
+
+            sizeSlider.addEventListener("input", (e) => {
+                const scale = e.target.value / 50;
+                portraitFrame.style.transform = `scale(${scale})`;
+                portraitFrame.style.transformOrigin = "top left";
+            });
+        </script>-->
+    </body>
+</html>
