@@ -5,7 +5,7 @@
 [![Issues][issues-shield]][issues-url]
 [![project_license][license-shield]][license-url]
 
-> Is your friend funded by AIPAC? 🤔
+> Is your friend funded by AIPAC? *No?* Now they can be! 🤔
 
 # About
 An [AIPAC](https://www.aipac.org/) meme generator, make it seem like Your friends and family are funded by AIPAC by generating [TrackAIPAC](https://trackaipac.com) style graphics locally on your web browser!
@@ -24,7 +24,6 @@ This project serves as a funny, simple barebones TrackAIPAC meme/graphic generat
 
 ## Try it our for Yourself!
 Visit [makeaipac.linuxlarp.dev](https://makeaipac.linuxlarp.dev) and see what madness you can create!
-**(NOT ACTIVE)**
 
 ## Project Setup
 - Install [![Bun][bun-logo]][bun-url]
@@ -38,16 +37,19 @@ Want to make a change to the code? Fork this repostory, and open a [Pull Request
 Want to suggest an idea? Head over to the issues page, and label your issue as a "Feature Request"
 
 ## Roadmap
+
+**NOTICE**: This project is a work in progress and will improve overtime. It is barebones intentionally for now.
+
 - [ ] Better controls and image tools
 - [ ] Enable/disable grayscale filter
-- [x] Better stylesheet
+- [ ] Better stylesheet
 - [x] More organization
 - [ ] Green template (No money recieved from AIPAC)
 - [ ] Export Feature
 - [ ] Proper server configuration
 - [ ] Convert to ViteJs for TS? (near future)
  
-> Pst! Any commits related to these ideas would help tremendously.
+> 👀 Pst! Any commits related to these ideas would help tremendously.
 
 ## ⚠️ Legal Disclaimer
 This is a parody meme generator inspired by trackaipac.com. It is not affiliated with, endorsed by, or intended to represent any real organization, individual, or political campaign. All generated content is satirical and fictional. Do not present generated content as real. This software is also in early development and may not be fully complete.
