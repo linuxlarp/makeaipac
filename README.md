@@ -23,14 +23,14 @@ This project serves as a funny, simple barebones TrackAIPAC meme/graphic generat
 [![Example 2][example2]]
 
 # Try it our for Yourself!
-Visit (makeaipac.linuxlarp.dev)[https://makeaipac.linuxlarp.dev], and see what madness you can create!
+Visit [makeaipac.linuxlarp.dev](https://makeaipac.linuxlarp.dev) and see what madness you can create!
 **(NOT ACTIVE)**
 
 # Project Setup
 - Install [bun](https://bun.sh)
 - Fork or clone the repository
 - Install dependencies via ``bun i``
-- Run the project by ``bun dev`` or ``bun prod`` (both do the same thing as of now.)
+- Run the project by ``bun dev`` or ``bun prod`` (**NOTE**: both scripts do the EXACT same thing, ill standarize this later)
 
 # Contributing
 Any contributions, wether ideas, rewrites or code changes are greatly appreciated. 
@@ -42,6 +42,7 @@ Want to suggest an idea? Head over to the issues page, and label your issue as a
 - [ ] Enable/disable grayscale filter
 - [ ] Better stylesheet
 - [ ] More organization
+- [ ] Prepare for Release
 
 ## ⚠️ Legal Disclaimer
 This is a parody meme generator inspired by trackaipac.com. It is not affiliated with, endorsed by, or intended to represent any real organization, individual, or political campaign. All generated content is satirical and fictional. Do not present generated content as real. This software is also in early development and may not be fully complete.
